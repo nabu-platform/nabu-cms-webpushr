@@ -1,0 +1,9 @@
+<structure collectionName="webpushrSubscriptions" name="webpushrSubscription">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="sid" type="java.lang.String"/>
+    <field comment="When the record was originally created." name="subscribed" timezone="UTC" type="java.util.Date"/>
+    <field comment="The device id is assumed to be a uuid" foreignKey="nabu.cms.core.types.emodel.core.UserDevice:id" minOccurs="0" name="userDeviceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.cms.core.types.emodel.core.User:id" minOccurs="0" name="userId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="When the record was last validated. Subscription ids change over time." name="validated" timezone="UTC" type="java.util.Date"/>
+    <field comment="Whether or not this is still active. It is deactivated when a newer subscription comes in for the same device." name="active" type="java.lang.Boolean"/>
+</structure>

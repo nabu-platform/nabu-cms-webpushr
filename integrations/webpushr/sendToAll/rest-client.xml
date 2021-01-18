@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restClient>
+    <method>POST</method>
+    <path>/v1/notification/send/all</path>
+    <requestHeaders>webpushrKey, webpushrAuthToken</requestHeaders>
+    <input>nabu.cms.webpushr.integrations.webpushr.messageToAll</input>
+    <output>nabu.cms.webpushr.integrations.webpushr.messageResponse</output>
+    <host>api.webpushr.com</host>
+    <secure>true</secure>
+    <requestType>JSON</requestType>
+    <responseType>JSON</responseType>
+    <lenient>true</lenient>
+</restClient>

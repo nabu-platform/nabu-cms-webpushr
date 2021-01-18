@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-01-17T13:38:01.256+01:00" lastModified="2021-01-18T10:28:24.859+01:00" leaf="true" version="19">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.cms.webpushr.services.subscription.selectByAnyId</references>
+    <references>nabu.cms.webpushr.database.types.webpushrSubscription</references>
+    <references>nabu.utils.List.size</references>
+    <references>nabu.cms.webpushr.services.send</references>
+    <references>java.lang.String</references>
+    <references>java.net.URI</references>
+    <references>java.util.UUID</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.utils.List.addAll</references>
+</node>

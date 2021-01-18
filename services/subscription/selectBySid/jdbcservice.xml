@@ -1,0 +1,7 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<outputDefinition>nabu.cms.webpushr.database.types.webpushrSubscription</outputDefinition>
+	<sql>select *
+from ~webpushr_subscriptions ws
+where ws.sid = :sid
+</sql>
+</jdbcService>

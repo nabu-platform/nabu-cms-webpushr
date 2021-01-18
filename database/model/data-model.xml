@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>311</x>
+        <y>112</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>158</x>
+        <y>84</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>400</x>
+        <y>197</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.cms.webpushr.database.types.webpushrSubscription</type>
+        <x>162</x>
+        <y>88</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.cms.webpushr.database.types.webpushrMessage</type>
+        <x>477</x>
+        <y>466</y>
+    </entries>
+</dataModel>

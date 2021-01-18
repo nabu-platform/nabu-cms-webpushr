@@ -1,0 +1,13 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="webApplicationId" type="java.lang.String"/>
+        <structure definition="nabu.cms.webpushr.integrations.webpushr.messageToAll" name="message"/>
+        <structure collectionName="webpushrSubscriptions" definition="nabu.cms.webpushr.database.types.webpushrSubscription" maxOccurs="unbounded" minOccurs="0" name="subscriptions"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="nabu.cms.webpushr.configuration" name="configuration"/>
+    <structure definition="nabu.cms.webpushr.integrations.webpushr.messageResponse" name="response"/>
+    <structure collectionName="webpushrMessages" definition="nabu.cms.webpushr.database.types.webpushrMessage" name="message"/>
+    <structure collectionName="webpushrMessages" definition="nabu.cms.webpushr.database.types.webpushrMessage" maxOccurs="unbounded" minOccurs="0" name="messages"/>
+    <structure definition="nabu.cms.webpushr.integrations.webpushr.messageToSid" name="messageToSid"/>
+</structure>

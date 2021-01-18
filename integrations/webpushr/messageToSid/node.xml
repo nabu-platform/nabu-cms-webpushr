@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2021-01-18T09:38:27.443+01:00" lastModified="2021-01-18T09:38:40.052+01:00" leaf="true" version="4">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.cms.webpushr.integrations.webpushr.messageToAll</references>
+    <references>java.lang.String</references>
+</node>

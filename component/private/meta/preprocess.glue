@@ -1,0 +1,4 @@
+# we can't expose it at the actual root nor can we just use a redirect
+# workers are apparently not allowed to be behind a redirect...
+if (request.target() = server.root() + "webpushr-sw.js")
+	response.target(server.root() + "resources/webpushr-sw.js")

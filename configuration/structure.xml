@@ -1,0 +1,5 @@
+<structure name="configuration">
+    <field comment="The key that is published in the javascript file. You can copy paste this from the snippet provided by webpushr.&#10;https://app.webpushr.com/integration/manual" name="publicKey" type="java.lang.String"/>
+    <field comment="The key used by the rest services, you can find it: https://app.webpushr.com/integration/rest-api" name="webpushrKey" type="java.lang.String"/>
+    <field comment="The auth token used by the rest services, you can find it: https://app.webpushr.com/integration/rest-api" name="webpushrAuthToken" type="java.lang.String"/>
+</structure>

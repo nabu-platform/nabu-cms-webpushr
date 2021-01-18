@@ -1,0 +1,17 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="webApplicationId" type="java.lang.String"/>
+        <field name="title" type="java.lang.String"/>
+        <field name="message" type="java.lang.String"/>
+        <field name="targetUrl" type="java.net.URI"/>
+        <field minOccurs="0" name="icon" type="java.lang.String"/>
+        <field minOccurs="0" name="image" type="java.lang.String"/>
+        <field maxOccurs="unbounded" minOccurs="0" name="userId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field maxOccurs="unbounded" minOccurs="0" name="userDeviceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field comment="You can't use the sid itself, but you can use the subscription id" maxOccurs="unbounded" minOccurs="0" name="subscriptionId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    </structure>
+    <structure name="output"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="ids" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <structure collectionName="webpushrSubscriptions" definition="nabu.cms.webpushr.database.types.webpushrSubscription" maxOccurs="unbounded" minOccurs="0" name="subscriptions"/>
+    <field minOccurs="0" name="amountOfIds" type="java.lang.Integer"/>
+</structure>

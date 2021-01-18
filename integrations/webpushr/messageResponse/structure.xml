@@ -1,0 +1,7 @@
+<structure name="messageResponse">
+    <field comment="This is &quot;success&quot; or &quot;failure&quot;" name="status" type="java.lang.String"/>
+    <field comment="In case of success" minOccurs="0" name="description" type="java.lang.String"/>
+    <field comment="In case of success" minOccurs="0" name="ID" type="java.lang.String"/>
+    <field comment="In case of failure" minOccurs="0" name="type" type="java.lang.String"/>
+    <field comment="In case of failure" minOccurs="0" name="message" type="java.lang.String"/>
+</structure>

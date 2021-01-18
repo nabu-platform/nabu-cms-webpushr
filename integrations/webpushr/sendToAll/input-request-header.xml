@@ -1,0 +1,4 @@
+<structure name="requestHeader">
+    <field alias="webpushrKey" name="webpushrkey" type="java.lang.String"/>
+    <field alias="webpushrAuthToken" name="webpushrauthtoken" type="java.lang.String"/>
+</structure>

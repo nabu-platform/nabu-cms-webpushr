@@ -1,0 +1,5 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sql>update ~webpushr_subscriptions ws
+set active = false
+where ws.user_device_id = :userDeviceId</sql>
+</jdbcService>
