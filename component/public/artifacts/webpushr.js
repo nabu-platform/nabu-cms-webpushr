@@ -1,5 +1,5 @@
 Vue.service("webpushr", {
-	services: ["swagger"],
+	services: ["swagger", "user"],
 	data: function() {
 		return {
 			// waiting for the sync can be expensive in time and generally not necessary

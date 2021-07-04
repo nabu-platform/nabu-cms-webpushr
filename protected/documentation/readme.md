@@ -1,6 +1,8 @@
 # Webpushr.com
 
-# Framework
+## Getting Started
+
+Steps to get started:
 
 - create a site in webpushr, if you are using localhost, make sure you generate a self-signed cert with localhost as CN and install it in the authorities section
 - copy the public key from the javascript blurb
@@ -8,7 +10,7 @@
 
 Every time we get a valid sid from webpushr, we push it to the backend for storage.
 
-# Manual test
+## Manual test
 
 I created a "site" in webpushr where I set as link "https://localhost:9090/".
 
@@ -16,6 +18,7 @@ The generated script I added to a file "webpushr.js" in public/artifacts, so spe
 
 ```javascript
 window.addEventListener("load", function () {
+	// wrapped
 }
 ```
 
@@ -51,9 +54,8 @@ To get the subscriber id for the current user, you can add an asynchronous metho
 
 ```javascript
 window.addEventListener("load", function () {
-    // the copy pasted bit from the site goes here
-
-    webpushr('fetch_id',function (sid) { 
+	// the copy pasted bit from the site goes here
+	webpushr('fetch_id',function (sid) { 
 		console.log("the id is", sid);
 	});
 }
