@@ -2,7 +2,5 @@
 	<outputDefinition>nabu.cms.webpushr.database.types.webpushrSubscription</outputDefinition>
 	<sql>select *
 from ~webpushr_subscriptions ws
-where ws.id = any(:ids)
-	or ws.user_device_id = any(:ids)
-	or ws.user_id = any(:ids)</sql>
+where ws.device_id = any(:deviceIds)</sql>
 </jdbcService>

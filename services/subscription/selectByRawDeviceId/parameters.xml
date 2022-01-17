@@ -1,0 +1,3 @@
+<structure name="parameter">
+    <field maxOccurs="unbounded" name="deviceIds" type="java.lang.String"/>
+</structure>

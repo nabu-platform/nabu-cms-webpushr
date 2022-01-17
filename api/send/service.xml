@@ -1,9 +1,11 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="c2277ad1-3340-43cd-9939-33544c9a5af5">
+		id="c2277ad1-3340-43cd-9939-33544c9a5af5"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="cd17410f-f55e-4ab2-8fa9-99ecb8aceb01">
+			id="cd17410f-f55e-4ab2-8fa9-99ecb8aceb01"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="76c23c2a-ef9f-472f-89d6-a64c802cb9d1"
@@ -79,8 +81,8 @@
 				serviceId="nabu.utils.List.size"
 				resultName="result87e6dda1f05c49c9a833b335c4ac9e8f"
 				temporaryMapping="true"
-				x="258"
-				y="299"
+				x="529"
+				y="306"
 				invocationOrder="2"
 				asynchronous="false"
 				recache="false">
@@ -107,7 +109,8 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="d39a0a1b-c4ab-46ce-adc5-2721081c43e3"
-			label="amountOfIds &gt; 0">
+			label="amountOfIds &gt; 0"
+			lineNumber="3">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="f4cfb8f5-b9b9-4641-9d12-04ce31ca04eb"
@@ -143,11 +146,79 @@
 			disabled="false"
 			id="4aa8b437-7ddd-4d0a-a0e7-5c5191511497"
 			label="amountOfIds &gt; 0 &amp;&amp; subscriptions = null"
+			lineNumber="4"
 			code="INVALID-ID"
 			message="Could not resolve the given ids into valid subscriptions" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="c10ad33f-7b1b-4ab7-bfaa-39691b7dc994">
+			id="9cdb7cbd-b985-4bed-8a93-4b9545b1e96f"
+			label="input/deviceId != null"
+			lineNumber="5">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="3ae8e530-36fb-474f-b932-2e6269b8f2b4"
+				serviceId="nabu.cms.webpushr.services.subscription.selectByRawDeviceId"
+				resultName="resulte74444759d5940798a1297396621d523"
+				temporaryMapping="true"
+				x="149"
+				y="68"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7cab9f23-f53a-4636-8936-321d792fcbe8"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/deviceId</from>
+				<to>parameters/deviceIds</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="f6d046b8-ba60-4560-a377-0efdaf2a1fae"
+				serviceId="nabu.utils.List.addAll"
+				resultName="resulte2f07fc1e76e48be84f7c66509a2fd2f"
+				temporaryMapping="true"
+				x="344"
+				y="463"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="c39fa4d4-4d15-41bc-a63a-5687475d3002"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resulte74444759d5940798a1297396621d523/results</from>
+				<to>objects</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="43761878-ff8d-433e-96d1-063e9c63e2f1"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>subscriptions</from>
+				<to>list</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="f3352fd9-ec2f-48c8-99f9-6ebb0c0681fd"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulte2f07fc1e76e48be84f7c66509a2fd2f/list</from>
+			<to>subscriptions</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="c10ad33f-7b1b-4ab7-bfaa-39691b7dc994"
+			lineNumber="6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="12584fa8-bd63-4294-8cce-d187799ffb7e"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.jdbc.JDBCServiceManager" created="2021-01-18T08:46:18.126+01:00" lastModified="2022-01-17T09:49:33.095+01:00" leaf="false" version="5">
+<node artifactManager="be.nabu.eai.module.services.jdbc.JDBCServiceManager" created="2021-01-18T08:46:18.126+01:00" lastModified="2022-01-17T09:49:25.866+01:00" leaf="false" version="7">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
@@ -8,6 +8,7 @@
     <references>java.lang.Integer</references>
     <references>java.lang.Boolean</references>
     <references>be.nabu.libs.services.jdbc.AffixInput</references>
+    <references>nabu.cms.webpushr.services.subscription.selectByRawDeviceId.parameters</references>
     <references>be.nabu.libs.types.api.KeyValuePair</references>
     <references>nabu.cms.webpushr.database.types.webpushrSubscription</references>
     <references>java.lang.Long</references>

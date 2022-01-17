@@ -1,10 +1,12 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="8f387d98-51fe-4545-ae0a-a549d124e224">
+		id="8f387d98-51fe-4545-ae0a-a549d124e224"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="d8be96c4-ec46-47e1-93df-9f4194925ad9"
-			label="input/token != null">
+			label="input/token != null"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="e4e2db15-0b94-4507-93a3-3b96a883123f"
@@ -48,7 +50,8 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="36c74c8f-bd88-4fae-85ab-8fddfdd708d8"
-			label="user != null &amp;&amp; input/device/deviceId != null">
+			label="user != null &amp;&amp; input/device/deviceId != null"
+			lineNumber="3">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="43e1e57b-7f2a-419a-b823-aaf05c00091a"
@@ -82,7 +85,8 @@
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="3b2e1b17-007e-4a1e-a52e-a4f044a9750e">
+			id="3b2e1b17-007e-4a1e-a52e-a4f044a9750e"
+			lineNumber="4">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="563c5997-eb51-4ae7-a59b-659d5be322d8"
@@ -118,7 +122,8 @@
 			comment="If there is no existing subscription for this sid but we do have a device, delete any running sids, you got a new one"
 			disabled="false"
 			id="b9b2f3bf-9737-4c9a-b9d0-a1eae5fdbfe9"
-			label="!existing &amp;&amp; device">
+			label="!existing &amp;&amp; device"
+			lineNumber="5">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="be856934-5576-4bd8-9fc8-ed30e8c8d3aa"
@@ -144,7 +149,8 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="8cc4c654-5fc4-4d08-b141-581a640468c6"
-			label="!existing">
+			label="!existing"
+			lineNumber="6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="26303b88-ec96-4fd6-8dd0-5605a8ab8301"
@@ -201,7 +207,8 @@
 			comment="If we have a user, map it, don't overwrite if we don't"
 			disabled="false"
 			id="52994f25-90bc-4add-bef4-5c1f0591d1b9"
-			label="user">
+			label="user"
+			lineNumber="7">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="5857f2b8-3444-4289-ba66-d1db52457bce"
@@ -216,7 +223,8 @@
 			comment="If we have a device, map it"
 			disabled="false"
 			id="12284151-7260-4a5e-865f-cd4c51921ad7"
-			label="device">
+			label="device"
+			lineNumber="8">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="24559aba-a3cf-4846-80dc-b37a4f2b5e77"
@@ -229,7 +237,8 @@
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="73f04682-48c0-4057-ac48-0817e5c95236">
+			id="73f04682-48c0-4057-ac48-0817e5c95236"
+			lineNumber="9">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="4414656e-5f18-4770-9384-7d9bb7eb1760"
@@ -260,10 +269,20 @@
 			<from>true</from>
 			<to>existing/active</to>
 		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="725f2ed2-e9ad-45ff-a15c-c935a7cb1be1"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/device/deviceId</from>
+			<to>existing/deviceId</to>
+		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="98468952-8472-451e-9a08-8e7de4c1cee2">
+			id="98468952-8472-451e-9a08-8e7de4c1cee2"
+			lineNumber="10">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="7f1f8c01-0adc-4509-a2ec-b6d58f055668"
