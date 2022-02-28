@@ -38,6 +38,7 @@ Vue.service("webpushr", {
 	},
 	methods: {
 		pushSid: function() {
+			var self = this;
 			webpushr('fetch_id',function (sid) { 
 				var result = self.$services.swagger.execute("nabu.cms.webpushr.rest.push", {sid: sid});
 				self.sid = sid;
