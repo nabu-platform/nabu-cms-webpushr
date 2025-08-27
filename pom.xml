@@ -26,5 +26,37 @@
 			<groupId>nabu.services</groupId>
 			<artifactId>vm</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>nabu.web.rest</groupId>
+			<artifactId>provider</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu</groupId>
+			<artifactId>utils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.cms</groupId>
+			<artifactId>core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.data</groupId>
+			<artifactId>xml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web</groupId>
+			<artifactId>component</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.types</groupId>
+			<artifactId>model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web.rest</groupId>
+			<artifactId>client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.protocols.jdbc</groupId>
+			<artifactId>pool</artifactId>
+		</dependency>
 	</dependencies>
 </project>
